@@ -4,6 +4,7 @@
   "description": "Operator overloading plugin for babel",
   "repository": "foxbenjaminfox/babel-plugin-operator-overloading",
   "author": "Benjamin Fox <foxbenjaminfox@gmail.com>",
+  "license": "Apache-2.0",
   "main": "lib/index.js",
   "devDependencies": {
     "babel-cli": "^6.4.5",
