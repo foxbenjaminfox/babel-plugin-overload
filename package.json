@@ -1,8 +1,8 @@
 {
   "version": "0.0.0",
-  "name": "babel-plugin-operator-overloading",
+  "name": "babel-plugin-overload",
   "description": "Operator overloading plugin for babel",
-  "repository": "foxbenjaminfox/babel-plugin-operator-overloading",
+  "repository": "foxbenjaminfox/babel-plugin-overload",
   "author": "Benjamin Fox <foxbenjaminfox@gmail.com>",
   "license": "Apache-2.0",
   "main": "lib/index.js",
@@ -25,7 +25,8 @@
     "postpublish": "git push origin master --follow-tags"
   },
   "keywords": [
-    "operators",
+    "operator",
+    "overload",
     "operator-overloading",
     "babel-plugin"
   ],

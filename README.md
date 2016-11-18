@@ -1,4 +1,4 @@
-# babel-plugin-operator-overloading
+# babel-plugin-overload
 
 This is an experimental plugin that allows you to overload operators in your Javascript code.
 
@@ -56,7 +56,7 @@ At the moment, overloading is only supported for the left side value. Support fo
 ## Installation
 
 ````sh
-$ npm install babel-plugin-operator-overloading
+$ npm install babel-plugin-overload
 ````
 
 ## Usage
@@ -67,20 +67,20 @@ $ npm install babel-plugin-operator-overloading
 
 ```json
 {
-  "plugins": ["operator-overloading"]
+  "plugins": ["overload"]
 }
 ```
 
 ### Via CLI
 
 ```sh
-$ babel --plugins operator-overloading script.js
+$ babel --plugins overload script.js
 ```
 
 ### Via Node API
 
 ````javascript
 require("babel-core").transform("code", {
-  plugins: ["operator-overloading"]
+  plugins: ["overload"]
 });
 ````
