@@ -1,6 +1,6 @@
 # babel-plugin-operator-overloading
 
-This plugin allows you to overload operators in your Javascript code.
+This is an experimental plugin that allows you to overload operators in your Javascript code.
 
 Compare with Python:
 
@@ -9,30 +9,32 @@ class Addable:
   def __add__(self, other):
     return # Some computation using self and other
 ````
-In Javascript with this plugin:
+In Javascript, using this Babel plugin:
 ````js
 class Addable {
   [Symbol.for('+')] (other) {
-    return # some computation using this and other
+    return // some computation using this and other
   }
 }
 ````
+
+This plugin is still in beta and should be considered highly experimental. I should go without saying that you probably should not use this in your production code.
 
 ## Example
 
 **In**
 
-```js
+````js
 x + y
-```
+````
 
 **Out**
 
-```js
+````js
 function (_left, _right) {
   if (_left[Symbol.for("+")]) return _left[Symbol.for("+")](_right);else return _left + _right;
 }(x, y);
-```
+````
 
 ## Supported Operators
 At the moment, all binary operators are supported. Unary operators are coming soon.
@@ -53,9 +55,9 @@ At the moment, overloading is only supported for the left side value. Support fo
 
 ## Installation
 
-```sh
+````sh
 $ npm install babel-plugin-operator-overloading
-```
+````
 
 ## Usage
 
@@ -77,8 +79,8 @@ $ babel --plugins operator-overloading script.js
 
 ### Via Node API
 
-```javascript
+````javascript
 require("babel-core").transform("code", {
   plugins: ["operator-overloading"]
 });
-```
+````
