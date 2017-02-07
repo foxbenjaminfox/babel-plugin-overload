@@ -1,5 +1,7 @@
 # babel-plugin-overload
 
+  [![CircleCI](https://circleci.com/gh/foxbenjaminfox/babel-plugin-overload/tree/master.svg?style=shield)](https://circleci.com/gh/foxbenjaminfox/babel-plugin-overload/tree/master)
+
 This is an experimental plugin that allows you to overload operators in your Javascript code.
 
 Compare with Python:
