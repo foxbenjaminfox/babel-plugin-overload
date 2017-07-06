@@ -3,7 +3,9 @@ import template from 'babel-template'
 function invokedTemplate(op) {
   return template(`
       (function (LEFT_ARG, RIGHT_ARG) { 
-        if (LEFT_ARG[Symbol.for("${op}")]) return LEFT_ARG[Symbol.for("${op}")](RIGHT_ARG)
+        if (LEFT_ARG !== null && LEFT_ARG !== undefined
+             && LEFT_ARG[Symbol.for("${op}")])
+            return LEFT_ARG[Symbol.for("${op}")](RIGHT_ARG)
         else return LEFT_ARG ${op} RIGHT_ARG
       })
   `)
