@@ -9,18 +9,19 @@ Compare with Python:
 ````py
 class Addable:
   def __add__(self, other):
-    return # Some computation using self and other
+    return # some computation which uses self and other
 ````
-In Javascript, using this Babel plugin:
+
+Using this Babel plugin:
 ````js
 class Addable {
   [Symbol.for('+')] (other) {
-    return // some computation using this and other
+    return // some computation which uses this and other
   }
 }
 ````
 
-This plugin is still in beta and should be considered highly experimental. I should go without saying that you probably should not use this in your production code.
+This plugin is still in beta and should be considered highly experimental. It should go without saying that you probably should not use this in production.
 
 ## Example
 
